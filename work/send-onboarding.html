@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Send App Onboarding — Mide Ajayi</title>
+  <link rel="stylesheet" href="shared.css">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap');
+:root{--color-bg:#0A0A0A;--color-surface:#111111;--color-surface-2:#161616;--color-border:#1E1E1E;--color-border-light:#262626;--color-text-primary:#F2F0EB;--color-text-secondary:#888880;--color-text-tertiary:#4A4A47;--color-text-muted:#2E2E2B;--color-accent:#C8B89A;--color-accent-dim:#7A6B57;--font-display:'Playfair Display',Georgia,serif;--font-body:'DM Sans',system-ui,sans-serif;--text-xs:0.75rem;--text-sm:0.875rem;--text-base:1rem;--text-lg:1.125rem;--text-xl:1.25rem;--text-2xl:1.5rem;--text-3xl:2rem;--text-4xl:2.75rem;--text-5xl:3.75rem;--leading-tight:1.1;--leading-snug:1.25;--leading-normal:1.5;--leading-relaxed:1.7;--tracking-tight:-0.03em;--tracking-wide:0.04em;--tracking-wider:0.08em;--tracking-widest:0.16em;--space-1:0.25rem;--space-2:0.5rem;--space-3:0.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;--space-20:5rem;--space-24:6rem;--space-32:8rem;--max-width:1200px;--content-width:740px;--nav-height:72px;--gutter:clamp(1.5rem,5vw,4rem);--radius-sm:4px;--radius-md:8px;--radius-lg:12px;--radius-full:9999px;--ease-out:cubic-bezier(0.16,1,0.3,1);--duration-fast:150ms;--duration-base:300ms;--duration-slow:600ms;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{font-size:16px;scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}body{background-color:var(--color-bg);color:var(--color-text-primary);font-family:var(--font-body);font-weight:300;line-height:var(--leading-relaxed);overflow-x:hidden;}h1,h2,h3,h4{font-family:var(--font-display);font-weight:400;line-height:var(--leading-tight);letter-spacing:var(--tracking-tight);}p{color:var(--color-text-secondary);line-height:var(--leading-relaxed);}a{color:inherit;text-decoration:none;transition:color var(--duration-fast) var(--ease-out);}a:hover{color:var(--color-accent);}ul{list-style:none;}::selection{background:var(--color-accent);color:var(--color-bg);}body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;opacity:0.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");}
+.container{width:100%;max-width:var(--max-width);margin:0 auto;padding:0 var(--gutter);}.container--content{width:100%;max-width:var(--content-width);margin:0 auto;padding:0 var(--gutter);}.label{font-size:var(--text-xs);font-weight:500;letter-spacing:var(--tracking-widest);text-transform:uppercase;color:var(--color-text-tertiary);}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-height);display:flex;align-items:center;transition:background var(--duration-base) var(--ease-out);}.nav.scrolled{background:rgba(10,10,10,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--color-border);}.nav__inner{width:100%;max-width:var(--max-width);margin:0 auto;padding:0 var(--gutter);display:flex;align-items:center;justify-content:space-between;}.nav__logo{font-family:var(--font-display);font-size:1.125rem;color:var(--color-text-primary);}.nav__logo span{color:var(--color-accent);}.nav__links{display:flex;align-items:center;gap:var(--space-8);}.nav__link{font-size:var(--text-sm);color:var(--color-text-secondary);letter-spacing:var(--tracking-wide);position:relative;transition:color var(--duration-fast) var(--ease-out);}.nav__link::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;background:var(--color-accent);transition:width var(--duration-base) var(--ease-out);}.nav__link:hover{color:var(--color-text-primary);}.nav__link:hover::after{width:100%;}.nav__back{display:flex;align-items:center;gap:var(--space-2);font-size:var(--text-sm);color:var(--color-text-tertiary);letter-spacing:var(--tracking-wide);transition:color var(--duration-fast) var(--ease-out);}.nav__back:hover{color:var(--color-accent);}.nav__back svg{transition:transform var(--duration-base) var(--ease-out);}.nav__back:hover svg{transform:translateX(-3px);}
+.cs-hero{padding-top:calc(var(--nav-height) + var(--space-16));padding-bottom:var(--space-16);}.cs-hero__tag{display:flex;align-items:center;gap:var(--space-4);margin-bottom:var(--space-8);}.cs-hero__title{font-family:var(--font-display);font-size:clamp(var(--text-3xl),6vw,var(--text-5xl));font-weight:400;letter-spacing:-0.04em;line-height:1.05;color:var(--color-text-primary);margin-bottom:var(--space-6);max-width:900px;}.cs-hero__sub{font-size:var(--text-lg);color:var(--color-text-secondary);line-height:var(--leading-relaxed);max-width:680px;margin-bottom:var(--space-10);}.cs-hero__meta{display:flex;flex-wrap:wrap;gap:var(--space-8);padding:var(--space-6) 0;border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border);margin-bottom:var(--space-10);}.cs-meta-item{display:flex;flex-direction:column;gap:var(--space-1);}.cs-meta-item .label{font-size:10px;}.cs-meta-value{font-size:var(--text-sm);font-weight:400;color:var(--color-text-primary);margin-top:var(--space-1);}
+.cs-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-4);margin-bottom:var(--space-16);}.cs-stat{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-6);}.cs-stat__value{font-family:var(--font-display);font-size:var(--text-3xl);font-weight:400;color:var(--color-text-primary);letter-spacing:var(--tracking-tight);line-height:1;margin-bottom:var(--space-2);}.cs-stat__label{font-size:var(--text-xs);color:var(--color-text-tertiary);line-height:var(--leading-normal);}
+.cs-cover{width:100%;aspect-ratio:16/8;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:var(--space-24);display:flex;align-items:center;justify-content:center;position:relative;}.cs-cover__placeholder{font-family:var(--font-display);font-size:var(--text-2xl);color:var(--color-text-muted);letter-spacing:var(--tracking-tight);}.cs-cover__placeholder::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 40% 50%,rgba(200,184,154,0.06) 0%,transparent 60%);}.cs-cover img{width:100%;height:100%;object-fit:cover;}
+.cs-body{padding-bottom:var(--space-32);}.cs-section{margin-bottom:var(--space-20);}.cs-section__pill{display:inline-flex;align-items:center;padding:var(--space-1) var(--space-4);border-radius:var(--radius-full);font-size:var(--text-xs);font-weight:500;letter-spacing:var(--tracking-widest);text-transform:uppercase;margin-bottom:var(--space-8);}.pill--context{background:rgba(14,42,71,0.4);color:#6BA3D6;border:1px solid rgba(14,42,71,0.6);}.pill--tension{background:rgba(71,14,14,0.4);color:#D68080;border:1px solid rgba(71,14,14,0.6);}.pill--decision{background:rgba(71,50,14,0.4);color:#D6A86B;border:1px solid rgba(71,50,14,0.6);}.pill--outcome{background:rgba(14,50,30,0.4);color:#6BB896;border:1px solid rgba(14,50,30,0.6);}.pill--reflection{background:rgba(40,14,71,0.4);color:#A87DD6;border:1px solid rgba(40,14,71,0.6);}
+.cs-body-text{font-size:var(--text-base);color:var(--color-text-secondary);line-height:1.85;margin-bottom:var(--space-5);}.cs-callout{background:var(--color-surface);border-left:2px solid var(--color-accent-dim);border-radius:0 var(--radius-md) var(--radius-md) 0;padding:var(--space-6) var(--space-8);margin:var(--space-8) 0;}.cs-callout p{font-family:var(--font-display);font-size:var(--text-lg);font-style:italic;color:var(--color-text-secondary);line-height:var(--leading-relaxed);}.cs-callout__attr{font-family:var(--font-body);font-size:var(--text-xs);color:var(--color-text-tertiary);margin-top:var(--space-3);font-style:normal;letter-spacing:var(--tracking-wide);}
+.cs-tensions{display:flex;flex-direction:column;gap:var(--space-3);margin:var(--space-6) 0;}.cs-tension-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);padding:var(--space-5) var(--space-6);display:grid;grid-template-columns:auto 1fr;gap:var(--space-5);align-items:start;}.cs-tension-label{font-size:10px;font-weight:500;letter-spacing:var(--tracking-widest);text-transform:uppercase;color:#D68080;background:rgba(71,14,14,0.3);border:1px solid rgba(71,14,14,0.4);padding:2px 8px;border-radius:var(--radius-full);white-space:nowrap;margin-top:2px;}.cs-tension-text{font-size:var(--text-sm);color:var(--color-text-primary);line-height:1.7;}
+.cs-decisions{list-style:none;padding:0;margin:var(--space-6) 0;}.cs-decisions li{padding:var(--space-5) 0;border-bottom:1px solid var(--color-border);position:relative;padding-left:var(--space-6);}.cs-decisions li:last-child{border-bottom:none;}.cs-decisions li::before{content:'';position:absolute;left:0;top:var(--space-6);width:6px;height:6px;border-radius:50%;background:var(--color-accent-dim);}.cs-decision-text{font-size:var(--text-sm);color:var(--color-text-primary);line-height:1.7;margin-bottom:var(--space-2);}.cs-decision-tradeoff{font-size:var(--text-xs);color:var(--color-text-tertiary);font-style:italic;line-height:1.6;}
+.cs-outcome-bar{border-left:2px solid #6BB896;border-radius:0 var(--radius-md) var(--radius-md) 0;padding:var(--space-6) var(--space-8);background:rgba(14,50,30,0.15);margin:var(--space-6) 0;}.cs-outcome-bar p{font-size:var(--text-base);color:var(--color-text-primary);line-height:1.8;}.cs-outcome-bar strong{color:var(--color-text-primary);font-weight:500;}
+.cs-skills{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-top:var(--space-4);}.cs-skill{font-size:var(--text-xs);color:var(--color-text-tertiary);background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-full);padding:var(--space-2) var(--space-4);letter-spacing:var(--tracking-wide);}
+.cs-screen{width:100%;aspect-ratio:16/9;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin:var(--space-12) 0;overflow:hidden;position:relative;}.cs-screen--tall{aspect-ratio:4/3;}.cs-screen__label{font-size:var(--text-xs);color:var(--color-text-muted);letter-spacing:var(--tracking-widest);text-transform:uppercase;}.cs-screen img{width:100%;height:100%;object-fit:cover;}
+.cs-divider{border:none;border-top:1px solid var(--color-border);margin:var(--space-16) 0;}
+.cs-next{padding:var(--space-20) 0;border-top:1px solid var(--color-border);}.cs-next__card{display:flex;align-items:center;justify-content:space-between;gap:var(--space-8);padding:var(--space-8) 0;border-bottom:1px solid var(--color-border);transition:opacity var(--duration-base) var(--ease-out);}.cs-next__card:hover{opacity:0.7;}.cs-next__info{display:flex;flex-direction:column;gap:var(--space-2);}.cs-next__company{font-size:var(--text-xs);color:var(--color-text-tertiary);letter-spacing:var(--tracking-wider);text-transform:uppercase;}.cs-next__title{font-family:var(--font-display);font-size:var(--text-2xl);color:var(--color-text-primary);letter-spacing:var(--tracking-tight);}.cs-next__arrow{color:var(--color-text-tertiary);flex-shrink:0;transition:transform var(--duration-base) var(--ease-out),color var(--duration-base) var(--ease-out);}.cs-next__card:hover .cs-next__arrow{transform:translateX(6px);color:var(--color-accent);}
+.footer{padding:var(--space-8) 0;border-top:1px solid var(--color-border);}.footer__inner{display:flex;align-items:center;justify-content:space-between;}
+.fade-in{opacity:0;transform:translateY(16px);transition:opacity 0.6s var(--ease-out),transform 0.6s var(--ease-out);}.fade-in.visible{opacity:1;transform:none;}
+@media(max-width:768px){.cs-stats{grid-template-columns:repeat(2,1fr);}.cs-stats .cs-stat:last-child{grid-column:1/-1;}.cs-tension-card{grid-template-columns:1fr;gap:var(--space-2);}.nav__links{display:none;}}
+  </style>
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="../" class="nav__logo">Mide<span>.</span></a>
+      <div class="nav__links">
+        <a href="../#work" class="nav__link">Work</a>
+        <a href="../about.html" class="nav__link">About</a>
+        <a href="../#contact" class="nav__link">Contact</a>
+        <a href="../assets/David_Ajayi_CV.pdf" class="nav__link" style="font-size:0.75rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-text-tertiary);border:1px solid var(--color-border-light);padding:0.5rem 1rem;border-radius:9999px;" target="_blank">CV ↗</a>
+      </div>
+      <a href="../" class="nav__back"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 4l-4 4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>All work</span></a>
+    </div>
+  </nav>
+  <main>
+    <section class="cs-hero">
+      <div class="container">
+        <div class="cs-hero__tag fade-in"><span class="label">Send App · Flutterwave · 2022</span><span style="width:3px;height:3px;border-radius:50%;background:var(--color-text-tertiary);display:inline-block;"></span><span class="label" style="color:var(--color-accent);">Revamp</span></div>
+        <h1 class="cs-hero__title fade-in">Send App: making a rebrand feel like more than a new coat of paint</h1>
+        <p class="cs-hero__sub fade-in">Redesigning the onboarding experience to match a new brand identity while simplifying the authentication flow and cutting onboarding time by 40%.</p>
+        <div class="cs-hero__meta fade-in">
+          <div class="cs-meta-item"><span class="label">Title</span><span class="cs-meta-value">Product Designer</span></div>
+          <div class="cs-meta-item"><span class="label">Role</span><span class="cs-meta-value">Lead product designer</span></div>
+          <div class="cs-meta-item"><span class="label">Platform</span><span class="cs-meta-value">Mobile app</span></div>
+          <div class="cs-meta-item"><span class="label">Company</span><span class="cs-meta-value">Flutterwave</span></div>
+          <div class="cs-meta-item"><span class="label">Year</span><span class="cs-meta-value">2022</span></div>
+        </div>
+        <div class="cs-stats fade-in">
+          <div class="cs-stat"><div class="cs-stat__value">40%</div><div class="cs-stat__label">Reduction in onboarding time</div></div>
+          <div class="cs-stat"><div class="cs-stat__value">1 flow</div><div class="cs-stat__label">Sign up and login merged</div></div>
+          <div class="cs-stat"><div class="cs-stat__value">Solo</div><div class="cs-stat__label">End-to-end ownership</div></div>
+        </div>
+        <div class="cs-cover fade-in"><span class="cs-cover__placeholder">Send App Onboarding — Cover image</span></div>
+      </div>
+    </section>
+    <section class="cs-body">
+      <div class="container--content">
+        <div class="cs-section fade-in">
+          <span class="cs-section__pill pill--context">Context</span>
+          <p class="cs-body-text">Send App was undergoing a full rebrand — new visual identity, a younger and more energetic tone of voice, and a renewed focus on its core demographic of young Africans sending and receiving money. A rebrand of that scale doesn't just change how a product looks. It changes the promise it makes to new users from the very first screen.</p>
+          <p class="cs-body-text">Onboarding is where that promise either lands or doesn't. The existing flow was functional but dated — separate sign up and login paths, no delight moments, no guidance for new users navigating a recently redesigned interface with unlabelled icons. As the lead product designer, my job was to close that gap by rebuilding the entry experience from scratch so the first screens felt like the new Send App, not a reskinned version of what came before. I collaborated closely with the brand team on the new visual direction and with engineering on the feasibility of merging the sign up and login flow into one, and the confetti implementation.</p>
+        </div>
+        <div class="cs-screen fade-in"><span class="cs-screen__label">Before state — old onboarding</span></div>
+        <div class="cs-section fade-in">
+          <span class="cs-section__pill pill--tension">Tension</span>
+          <p class="cs-body-text">A rebrand with UX ambitions surfaces a specific kind of tension: the pull between brand expression and functional restraint.</p>
+          <div class="cs-tensions">
+            <div class="cs-tension-card"><span class="cs-tension-label">T1</span><span class="cs-tension-text">The new brand wanted energy and personality, but onboarding users need clarity above everything else. The two can coexist, but only when brand is applied with discipline.</span></div>
+            <div class="cs-tension-card"><span class="cs-tension-label">T2</span><span class="cs-tension-text">The old flow had separate sign up and login paths — familiar, but slow. Merging them was the right UX call, but required enough clarity in the unified flow to avoid disorienting returning users.</span></div>
+            <div class="cs-tension-card"><span class="cs-tension-label">T3</span><span class="cs-tension-text">New iconography and an unlabelled nav bar were central to the rebrand's visual direction — but introduced a real first-use navigation problem that the old flow had never needed to solve.</span></div>
+            <div class="cs-tension-card"><span class="cs-tension-label">T4</span><span class="cs-tension-text">Introducing delight — confetti, celebratory moments — risked feeling performative if misplaced. The rebrand called for personality; the UX called for restraint. Finding where they overlapped was the design challenge.</span></div>
+          </div>
+          <div class="cs-callout">
+            <p>"The brand has a lot to say. Onboarding is not the place to say all of it."</p>
+            <div class="cs-callout__attr">— Principle that shaped how brand direction was applied across the flow</div>
+          </div>
+        </div>
+        <div class="cs-screen fade-in"><span class="cs-screen__label">Exploration / Early directions</span></div>
+        <div class="cs-section fade-in">
+          <span class="cs-section__pill pill--decision">Decision</span>
+          <p class="cs-body-text">The rebrand set the visual language. The UX decisions determined where and how much of it appeared:</p>
+          <ul class="cs-decisions">
+            <li><div class="cs-decision-text">Brand expression concentrated at emotional peaks — the welcome screen and account creation completion — rather than spread uniformly across every step</div><div class="cs-decision-tradeoff">Tradeoff: more restrained in the functional middle of the flow, but made the brand moments feel intentional rather than wallpaper</div></li>
+            <li><div class="cs-decision-text">Merged auth flow built around a single entry point — one screen that intelligently detected whether the user was new or returning, routing them accordingly without requiring an upfront choice</div><div class="cs-decision-tradeoff">Tradeoff: required rethinking the returning user experience entirely, but eliminated the first unnecessary decision in the flow</div></li>
+            <li><div class="cs-decision-text">Introduced a dedicated guide page immediately post-onboarding — a brief, skippable walkthrough of the new icon set and unlabelled nav bar, framed as "here's what's new" rather than "here's how to use the app"</div><div class="cs-decision-tradeoff">Tradeoff: one extra screen after signup, but reframed as a feature of the rebrand rather than a patch for a discoverability problem</div></li>
+            <li><div class="cs-decision-text">Confetti triggered only at account creation completion — the single moment that justified celebration in the flow</div><div class="cs-decision-tradeoff">Tradeoff: disciplined restraint required elsewhere, but gave the delight moment enough contrast to actually land</div></li>
+          </ul>
+        </div>
+        <div class="cs-screen cs-screen--tall fade-in"><span class="cs-screen__label">Final screens — onboarding flow</span></div>
+        <div class="cs-section fade-in">
+          <span class="cs-section__pill pill--outcome">Outcome</span>
+          <div class="cs-outcome-bar"><p>The revamped onboarding reduced completion time by <strong>40%</strong> — a direct result of the merged auth flow and streamlined step count. The guide page addressed the icon discoverability problem without adding meaningful friction to the core path. And the delight moments landed as intended: celebratory rather than gimmicky, because they were placed at moments users had actually earned them.</p></div>
+          <p class="cs-body-text" style="margin-top:var(--space-6);">The broader signal was that onboarding and brand expression don't have to compete. When visual identity is applied with discipline — serving the user's journey rather than performing for them — a rebrand can make a product feel more trustworthy, not just more attractive.</p>
+        </div>
+        <div class="cs-section fade-in">
+          <span class="cs-section__pill pill--reflection">Reflection</span>
+          <p class="cs-body-text">This project taught me that a rebrand is really a re-promise — every screen in onboarding is telling a new user what kind of product they've just joined. Getting that right means understanding the brand deeply enough to know when to express it and when to step back.</p>
+          <p class="cs-body-text">The biggest lesson: a rebrand is an opportunity to fix the UX, not just the visuals. The two are rarely handled together. Treating the rebrand as a reason to question the entire flow architecture was the decision that generated the most value.</p>
+        </div>
+        <hr class="cs-divider">
+        <div class="fade-in">
+          <span class="label" style="display:block;margin-bottom:var(--space-4);">Skills demonstrated</span>
+          <div class="cs-skills">
+            <span class="cs-skill">Onboarding design</span><span class="cs-skill">Rebrand execution</span><span class="cs-skill">Auth flow simplification</span><span class="cs-skill">Delight & motion design</span><span class="cs-skill">Navigation UX</span><span class="cs-skill">Solo ownership</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cs-next">
+      <div class="container--content">
+        <span class="label" style="display:block;margin-bottom:var(--space-6);">Next project</span>
+        <a href="send-referral.html" class="cs-next__card">
+          <div class="cs-next__info"><span class="cs-next__company">Flutterwave · 2024</span><span class="cs-next__title">Send App Referral: a reward both sides forgot to claim</span></div>
+          <svg class="cs-next__arrow" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container"><div class="footer__inner"><span class="label">© 2025 Mide Ajayi</span><a href="../" class="label" style="color:var(--color-text-tertiary);">← Back to work</a></div></div></footer>
+  <script>
+    const nav=document.getElementById('nav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>20);},{passive:true});
+    const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}});},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+    document.querySelectorAll('.fade-in').forEach((el,i)=>{if(el.closest('.cs-hero')){setTimeout(()=>el.classList.add('visible'),i*100);}else{observer.observe(el);}});
+  </script>
+</body>
+</html>
