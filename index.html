@@ -121,6 +121,8 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
 .work__card:not(.work__card--featured) { grid-column: span 6; display: flex; flex-direction: column; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; background: var(--color-surface); transition: border-color var(--duration-base) var(--ease-out), transform var(--duration-base) var(--ease-out); }
 .work__card:hover { border-color: var(--color-border-light); transform: translateY(-2px); }
 .work__card-image { aspect-ratio: 16/9; overflow: hidden; background: var(--color-surface-2); }
+.work__card-image img { width: 100%; height: 100%; object-fit: cover; transform: scale(1); transition: transform 0.5s var(--ease-out); }
+.work__card:hover .work__card-image img { transform: scale(1.08); }
 .work__card--featured .work__card-image { aspect-ratio: auto; min-height: 320px; }
 .work__card-placeholder { width: 100%; height: 100%; min-height: 200px; background-color: var(--card-color, #111); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
 .work__card-placeholder::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 30% 40%, rgba(200,184,154,0.08) 0%, transparent 60%); }
@@ -262,7 +264,7 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
 
           <a href="work/fasttrack.html" class="work__card work__card--featured">
             <div class="work__card-image">
-              <div class="work__card-placeholder" style="--card-color: #0F1A14;"><span>FastTrack</span></div>
+              <img src="assets/images/projects/fasttrack.png" alt="FastTrack">
             </div>
             <div class="work__card-body">
               <div class="work__card-meta">
@@ -280,7 +282,7 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
 
           <a href="work/nobcredit.html" class="work__card">
             <div class="work__card-image">
-              <div class="work__card-placeholder" style="--card-color: #14100A;"><span>NobCredit</span></div>
+              <img src="assets/images/projects/nobcredit.png" alt="NobCredit">
             </div>
             <div class="work__card-body">
               <div class="work__card-meta">
@@ -297,7 +299,7 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
 
           <a href="work/send-onboarding.html" class="work__card">
             <div class="work__card-image">
-              <div class="work__card-placeholder" style="--card-color: #0A0F1A;"><span>Send App</span></div>
+              <img src="assets/images/projects/send-onboarding.png" alt="Send App Onboarding">
             </div>
             <div class="work__card-body">
               <div class="work__card-meta">
@@ -313,7 +315,7 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
 
           <a href="work/send-referral.html" class="work__card">
             <div class="work__card-image">
-              <div class="work__card-placeholder" style="--card-color: #0F0A14;"><span>Send Referral</span></div>
+              <img src="assets/images/projects/send-referral.png" alt="Send App Referral">
             </div>
             <div class="work__card-body">
               <div class="work__card-meta">
@@ -329,7 +331,7 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
 
           <a href="work/raenest-wrapped.html" class="work__card">
             <div class="work__card-image">
-              <div class="work__card-placeholder" style="--card-color: #0A1410;"><span>Raenest Wrapped</span></div>
+              <img src="assets/images/projects/raenest-wrapped.png" alt="Raenest Wrapped">
             </div>
             <div class="work__card-body">
               <div class="work__card-meta">
@@ -346,7 +348,7 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
 
           <a href="work/dca-calculator.html" class="work__card work__card--featured work__card--featured-reverse">
             <div class="work__card-image">
-              <div class="work__card-placeholder" style="--card-color: #100A0A;"><span>Bitnob DCA</span></div>
+              <img src="assets/images/projects/dca.png" alt="Bitnob DCA Calculator">
             </div>
             <div class="work__card-body">
               <div class="work__card-meta">
