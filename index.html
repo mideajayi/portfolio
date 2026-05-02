@@ -441,17 +441,18 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
     }, 100);
 
     // Cursor
+    let onCard = false;
     const cursor = document.createElement('div');
     cursor.style.cssText = 'position:fixed;width:6px;height:6px;border-radius:50%;background:#C8B89A;pointer-events:none;z-index:9998;opacity:0;transform:translate(-50%,-50%);transition:opacity 0.3s ease,transform 0.15s ease;';
     document.body.appendChild(cursor);
     document.addEventListener('mousemove', e => {
       cursor.style.left = e.clientX + 'px';
       cursor.style.top = e.clientY + 'px';
-      cursor.style.opacity = '1';
+      if (!onCard) cursor.style.opacity = '1';
     });
     document.querySelectorAll('a').forEach(el => {
-      el.addEventListener('mouseenter', () => { cursor.style.transform = 'translate(-50%,-50%) scale(5)'; cursor.style.opacity = '0.3'; });
-      el.addEventListener('mouseleave', () => { cursor.style.transform = 'translate(-50%,-50%) scale(1)'; cursor.style.opacity = '1'; });
+      el.addEventListener('mouseenter', () => { if (!onCard) { cursor.style.transform = 'translate(-50%,-50%) scale(5)'; cursor.style.opacity = '0.3'; } });
+      el.addEventListener('mouseleave', () => { if (!onCard) { cursor.style.transform = 'translate(-50%,-50%) scale(1)'; cursor.style.opacity = '1'; } });
     });
 
     // Card cursor
@@ -464,8 +465,16 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
       cardCursor.style.top = e.clientY + 'px';
     });
     document.querySelectorAll('.work__card').forEach(card => {
-      card.addEventListener('mouseenter', () => cardCursor.classList.add('active'));
-      card.addEventListener('mouseleave', () => cardCursor.classList.remove('active'));
+      card.addEventListener('mouseenter', () => {
+        onCard = true;
+        cursor.style.opacity = '0';
+        cursor.style.transform = 'translate(-50%,-50%) scale(1)';
+        cardCursor.classList.add('active');
+      });
+      card.addEventListener('mouseleave', () => {
+        onCard = false;
+        cardCursor.classList.remove('active');
+      });
     });
   </script>
 
