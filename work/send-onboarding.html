@@ -21,6 +21,7 @@
 .cs-outcome-bar{border-left:2px solid #6BB896;border-radius:0 var(--radius-md) var(--radius-md) 0;padding:var(--space-6) var(--space-8);background:rgba(14,50,30,0.15);margin:var(--space-6) 0;}.cs-outcome-bar p{font-size:var(--text-base);color:var(--color-text-primary);line-height:1.8;}.cs-outcome-bar strong{color:var(--color-text-primary);font-weight:500;}
 .cs-skills{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-top:var(--space-4);}.cs-skill{font-size:var(--text-xs);color:var(--color-text-tertiary);background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-full);padding:var(--space-2) var(--space-4);letter-spacing:var(--tracking-wide);}
 .cs-screen{width:100%;aspect-ratio:16/9;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;margin:var(--space-12) 0;overflow:hidden;position:relative;}.cs-screen--tall{aspect-ratio:4/3;}.cs-screen__label{font-size:var(--text-xs);color:var(--color-text-muted);letter-spacing:var(--tracking-widest);text-transform:uppercase;}.cs-screen img{width:100%;height:100%;object-fit:cover;}
+.cs-caption{font-size:var(--text-xs);color:var(--color-text-tertiary);line-height:var(--leading-normal);text-align:center;letter-spacing:var(--tracking-wide);font-style:italic;margin-top:calc(var(--space-3) - var(--space-12));margin-bottom:var(--space-12);}
 .cs-divider{border:none;border-top:1px solid var(--color-border);margin:var(--space-16) 0;}
 .cs-next{padding:var(--space-20) 0;border-top:1px solid var(--color-border);}.cs-next__card{display:flex;align-items:center;justify-content:space-between;gap:var(--space-8);padding:var(--space-8) 0;border-bottom:1px solid var(--color-border);transition:opacity var(--duration-base) var(--ease-out);}.cs-next__card:hover{opacity:0.7;}.cs-next__info{display:flex;flex-direction:column;gap:var(--space-2);}.cs-next__company{font-size:var(--text-xs);color:var(--color-text-tertiary);letter-spacing:var(--tracking-wider);text-transform:uppercase;}.cs-next__title{font-family:var(--font-display);font-size:var(--text-2xl);color:var(--color-text-primary);letter-spacing:var(--tracking-tight);}.cs-next__arrow{color:var(--color-text-tertiary);flex-shrink:0;transition:transform var(--duration-base) var(--ease-out),color var(--duration-base) var(--ease-out);}.cs-next__card:hover .cs-next__arrow{transform:translateX(6px);color:var(--color-accent);}
 .footer{padding:var(--space-8) 0;border-top:1px solid var(--color-border);}.footer__inner{display:flex;align-items:center;justify-content:space-between;}
@@ -80,6 +81,7 @@
           <p class="cs-body-text">Onboarding is where that promise either lands or doesn't. The existing flow was functional but dated — separate sign up and login paths, no delight moments, no guidance for new users navigating a recently redesigned interface with unlabelled icons. As the lead product designer, my job was to close that gap by rebuilding the entry experience from scratch so the first screens felt like the new Send App, not a reskinned version of what came before. I collaborated closely with the brand team on the new visual direction and with engineering on the feasibility of merging the sign up and login flow into one, and the confetti implementation.</p>
         </div>
         <div class="cs-screen fade-in"><span class="cs-screen__label">Before state — old onboarding</span></div>
+        <p class="cs-caption">The pre-rebrand onboarding — separate sign up and login paths, no guidance for the new unlabelled icon set, and no delight at account creation.</p>
         <div class="cs-section fade-in">
           <span class="cs-section__pill pill--tension">Tension</span>
           <p class="cs-body-text">A rebrand with UX ambitions surfaces a specific kind of tension: the pull between brand expression and functional restraint.</p>
@@ -95,6 +97,7 @@
           </div>
         </div>
         <div class="cs-screen fade-in"><span class="cs-screen__label">Exploration / Early directions</span></div>
+        <p class="cs-caption">Early directions testing how far the new brand could go without losing clarity — the unified auth concept, guide page placement, and where confetti would earn its place.</p>
         <div class="cs-section fade-in">
           <span class="cs-section__pill pill--decision">Decision</span>
           <p class="cs-body-text">The rebrand set the visual language. The UX decisions determined where and how much of it appeared:</p>
@@ -106,6 +109,7 @@
           </ul>
         </div>
         <div class="cs-screen cs-screen--tall fade-in"><span class="cs-screen__label">Final screens — onboarding flow</span></div>
+        <p class="cs-caption">The rebuilt entry experience — a single intelligent auth screen, a post-onboarding icon guide framed as a rebrand feature, and confetti triggered only at the moment users had actually earned it.</p>
         <div class="cs-section fade-in">
           <span class="cs-section__pill pill--outcome">Outcome</span>
           <div class="cs-outcome-bar"><p>The revamped onboarding reduced completion time by <strong>40%</strong> — a direct result of the merged auth flow and streamlined step count. The guide page addressed the icon discoverability problem without adding meaningful friction to the core path. And the delight moments landed as intended: celebratory rather than gimmicky, because they were placed at moments users had actually earned them.</p></div>

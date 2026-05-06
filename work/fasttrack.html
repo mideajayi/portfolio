@@ -148,6 +148,7 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
 .cs-screen--tall { aspect-ratio: 4/3; }
 .cs-screen__label { font-size: var(--text-xs); color: var(--color-text-muted); letter-spacing: var(--tracking-widest); text-transform: uppercase; }
 .cs-screen img { width: 100%; height: 100%; object-fit: cover; }
+.cs-caption { font-size: var(--text-xs); color: var(--color-text-tertiary); line-height: var(--leading-normal); text-align: center; letter-spacing: var(--tracking-wide); font-style: italic; margin-top: calc(var(--space-3) - var(--space-12)); margin-bottom: var(--space-12); }
 
 /* Section divider */
 .cs-divider { border: none; border-top: 1px solid var(--color-border); margin: var(--space-16) 0; }
@@ -268,6 +269,7 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
         <div class="cs-screen fade-in">
           <span class="cs-screen__label">Current state / Before screens</span>
         </div>
+        <p class="cs-caption">The existing withdrawal experience — functional but slow, with funds taking up to 48 hours to process after a request was made.</p>
 
         <!-- Tension -->
         <div class="cs-section fade-in">
@@ -300,6 +302,7 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
         <div class="cs-screen fade-in">
           <span class="cs-screen__label">Exploration / Wireframes</span>
         </div>
+        <p class="cs-caption">Early explorations mapping the Rollee authentication sequence — understanding the fixed technical structure before designing around it.</p>
 
         <!-- Decision -->
         <div class="cs-section fade-in">
@@ -350,6 +353,7 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
         <div class="cs-screen cs-screen--tall fade-in">
           <span class="cs-screen__label">Final screens — key flow</span>
         </div>
+        <p class="cs-caption">The FastTrack flow from Upwork connection to funds confirmed — dual-logo trust signals, plain-language explainers, and Raenest's native design language throughout.</p>
 
         <!-- Outcome -->
         <div class="cs-section fade-in">
@@ -364,6 +368,7 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
         <div class="cs-screen fade-in">
           <span class="cs-screen__label">Edge cases / Error states</span>
         </div>
+        <p class="cs-caption">Every failure state designed before the happy path was finalised — failed connections, pending states, timeout errors, and partial payout scenarios.</p>
 
         <!-- Reflection -->
         <div class="cs-section fade-in">
