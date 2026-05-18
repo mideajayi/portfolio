@@ -218,14 +218,14 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
 
         <h1 class="cs-hero__title fade-in">FastTrack: from 48-hour waits to funds in under an hour</h1>
 
-        <p class="cs-hero__sub fade-in">A new withdrawal flow that cuts Upwork payout time from 48 hours to under 1 hour; processing $2.4M for 10,985 customers in its first four months.</p>
+        <p class="cs-hero__sub fade-in">A new withdrawal flow that cuts Upwork payout time from 48 hours to under 1 hour; processing $2.4M for 10,985 customers in 4 months.</p>
 
         <div class="cs-hero__meta fade-in">
-          <div class="cs-meta-item"><span class="label">Title</span><span class="cs-meta-value">Product Designer</span></div>
           <div class="cs-meta-item"><span class="label">Role</span><span class="cs-meta-value">Lead designer</span></div>
           <div class="cs-meta-item"><span class="label">Platform</span><span class="cs-meta-value">Mobile app</span></div>
-          <div class="cs-meta-item"><span class="label">Company</span><span class="cs-meta-value">Raenest</span></div>
           <div class="cs-meta-item"><span class="label">Year</span><span class="cs-meta-value">2025</span></div>
+          <div class="cs-meta-item"><span class="label">Company</span><span class="cs-meta-value">Raenest</span></div>
+          <div class="cs-meta-item"><span class="label">Industry</span><span class="cs-meta-value">Fintech</span></div>
         </div>
 
         <!-- Stat Cards -->
@@ -246,9 +246,9 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
         <!-- Context -->
         <div class="cs-section fade-in">
           <span class="cs-section__pill pill--context">Context</span>
-          <p class="cs-body-text">Raenest serves freelancers across Africa and emerging economies who earn in foreign currencies, particularly those on platforms like Upwork. The existing withdrawal experience was functional, but slow — it took 24–48 hours to process funds after a withdrawal request. For a freelancer managing rent, a supplier payment, or unexpected expenses, that gap is a real financial problem.</p>
-          <p class="cs-body-text">The business opportunity was equally clear. If Raenest could offer near-instant payouts while competitors couldn't, it would become the default account for any serious Upwork freelancer. FastTrack was that bet — a new standalone feature powered by a new API integration that would make funds available in under an hour.</p>
-          <p class="cs-body-text">I came in as lead product designer, partnering closely with a PM who owned the product brief, and working within the technical boundaries set by how the integration with Upwork actually functioned. I worked closely with the engineering team to understand the boundaries of what the integration could support — their constraints became design inputs, not blockers.</p>
+          <p class="cs-body-text">Aside Businesses, Raenest also serves freelancers across Africa and emerging economies who earn in foreign currencies, particularly those on platforms like Upwork. The existing withdrawal experience was functional, but slow: It took 24–48 hours to process funds after a withdrawal request. For a freelancer managing rent, supplier payment, or unexpected expenses, that gap is a real financial problem.</p>
+          <p class="cs-body-text">The business opportunity was equally clear. If Raenest could offer near-instant payouts while competitors couldn't, it would become the default account for any serious Upwork freelancer. FastTrack was that bet; a new standalone feature that would make funds available in under an hour.</p>
+          <p class="cs-body-text">I came in as lead product designer, partnering closely with a PM who owned the product brief, and working within the technical boundaries set by how the integration with Upwork actually functioned.</p>
         </div>
 
         <!-- Screen slot -->
@@ -260,8 +260,8 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
         <!-- Tension -->
         <div class="cs-section fade-in">
           <span class="cs-section__pill pill--tension">Tension</span>
-          <p class="cs-body-text">The core design challenge wasn't the speed — engineering handled that. It was this: to use FastTrack, users had to authenticate with Upwork inside a Raenest feature. That handoff, however briefly, breaks the illusion of a single-trusted product. And when you're asking someone to connect their income source to an external service, that moment of uncertainty is where people abandon.</p>
-          <p class="cs-body-text">At the same time, the integration had a fixed technical structure. The flow couldn't be redesigned around user preferences — it had to work within what the integration allowed. So the tension wasn't "what's the ideal flow?" It was: how do you make a technically constrained integration feel safe, simple, and native to Raenest?</p>
+          <p class="cs-body-text">The core design challenge wasn't the speed, as this was already handled by engineering. It was this: to use FastTrack, users had to authenticate with Upwork inside a Raenest feature. That handoff, however briefly, breaks the illusion of a single-trusted product. And when you're asking someone to connect their income source to a third-party service, that moment of uncertainty is where people abandon.</p>
+          <p class="cs-body-text">At the same time, the integration had a fixed technical structure. The flow couldn't be redesigned around user preferences, it had to work within what the integration allowed. So the tension wasn't "what's the ideal flow?" It was: how do you make a technically constrained integration feel safe, simple, and native to Raenest?</p>
 
           <div class="cs-tensions">
             <div class="cs-tension-card">
@@ -278,10 +278,10 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
             </div>
           </div>
 
-          <div class="cs-callout">
+          <!-- <div class="cs-callout">
             <p>"The integration gives us the rails. Your job is to make sure nobody notices they're switching tracks."</p>
             <div class="cs-callout__attr">— PM conversation that framed the design brief</div>
-          </div>
+          </div> -->
         </div>
 
         <!-- Screen slot -->
@@ -293,7 +293,7 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
         <!-- Decision -->
         <div class="cs-section fade-in">
           <span class="cs-section__pill pill--decision">Decision</span>
-          <p class="cs-body-text">Rather than treating the constraints as limitations, I used them as a design brief. The integration documentation became a design input — understanding exactly where the handoff happened let me design deliberately around that moment instead of around it. Four decisions shaped the final flow:</p>
+          <p class="cs-body-text">Rather than treating the constraints as limitations, I used them as a design brief. The Integration's documentation became a design input, understanding exactly where the handoff happened allowed me design deliberately around that moment. Four decisions shaped the final flow:</p>
 
           <ul class="cs-decisions">
             <li>
@@ -303,10 +303,6 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
             <li>
               <div class="cs-decision-text">Used Raenest's design language throughout — same components, same typography, same color — so the Upwork handoff felt like a continuation, not a departure</div>
               <div class="cs-decision-tradeoff">Tradeoff: constrained visual creativity, but maintained the single-product illusion users needed to feel safe</div>
-            </li>
-            <li>
-              <div class="cs-decision-text">Added explicit dual-logo trust signals and plain-language explanation at the authentication step — showing both Raenest and Upwork logos together, with a one-sentence explanation of what was happening and why</div>
-              <div class="cs-decision-tradeoff">Tradeoff: adds a screen, but research showed this was the highest drop-off risk moment</div>
             </li>
             <li>
               <div class="cs-decision-text">Designed every failure and edge case before any happy path screen was finalised — failed connections, pending states, partial transfers, timeout errors</div>
@@ -345,9 +341,9 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
         <div class="cs-section fade-in">
           <span class="cs-section__pill pill--outcome">Outcome</span>
           <div class="cs-outcome-bar">
-            <p>Within 4 months of launch, FastTrack processed <strong>$2.4M</strong> for <strong>10,985 customers</strong> — with no dedicated marketing push at launch. The adoption curve was organic, driven by word of mouth among the Upwork freelancer community. Withdrawal time dropped from up to 48 hours to consistently <strong>under 1 hour</strong>.</p>
+            <p>Within four(4) months of launch, FastTrack processed over <strong>$2.4M</strong> for more than <strong>10.5k customers</strong>, this is with no dedicated marketing push at launch. The adoption curve was organic, driven by word of mouth among the Upwork freelancer community. Upwork withdrawal time dropped from up to 48 hours to consistently <strong>under 1 hour</strong>.</p>
           </div>
-          <p class="cs-body-text" style="margin-top: var(--space-6);">The volume of money moved in that window — for a brand new feature — confirmed that the pent-up demand was real and that the trust design worked. Users didn't just try it once. The repeat usage rate in the first two months indicated the flow had earned confidence, not just curiosity.</p>
+          <p class="cs-body-text" style="margin-top: var(--space-6);">The volume of money moved in that window for a brand new feature confirmed that the demand was real and that the trust design worked. Users didn't just try it once. The repeat usage rate in the first two months indicated the flow had earned the confidence of customers, not just curiosity.</p>
         </div>
 
         <!-- Screen slot -->
@@ -359,8 +355,8 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
         <!-- Reflection -->
         <div class="cs-section fade-in">
           <span class="cs-section__pill pill--reflection">Reflection</span>
-          <p class="cs-body-text">This project sharpened something I now apply to every financial product I design: trust is not a feature you add — it's a property of every decision in the flow. The moment I stopped thinking about the integration as a technical constraint and started thinking of it as a trust design problem, the whole project became clearer.</p>
-          <p class="cs-body-text">If I were to revisit this, I'd invest more time in post-launch qualitative research — specifically, interviewing users who completed FastTrack for the first time. The metrics show it worked, but I'd want to understand which specific moment made them feel safe enough to proceed. That insight would make the next version significantly stronger.</p>
+          <p class="cs-body-text">This project sharpened something I now apply to every financial product I design: trust is not a feature you add, it's a property of every decision in the flow. The moment I stopped thinking about the integration as a technical constraint and started thinking of it as a trust design problem, the whole project became clearer.</p>
+          <p class="cs-body-text">If I were to revisit this, I'd invest more time in post-launch qualitative research, specifically, interviewing users who completed FastTrack for the first time. The metrics show it worked, but I'd want to understand which specific moment made them feel safe enough to proceed. That insight would make the next version significantly stronger.</p>
         </div>
 
         <hr class="cs-divider">
