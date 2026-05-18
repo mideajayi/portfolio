@@ -247,8 +247,8 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
         <div class="cs-section fade-in">
           <span class="cs-section__pill pill--context">Context</span>
           <p class="cs-body-text">Raenest serves freelancers across Africa and emerging economies who earn in foreign currencies, particularly those on platforms like Upwork. The existing withdrawal experience was functional, but slow — it took 24–48 hours to process funds after a withdrawal request. For a freelancer managing rent, a supplier payment, or unexpected expenses, that gap is a real financial problem.</p>
-          <p class="cs-body-text">The business opportunity was equally clear. If Raenest could offer near-instant payouts while competitors couldn't, it would become the default account for any serious Upwork freelancer. FastTrack was that bet — a new standalone feature powered by a third-party API integration that would make funds available in under an hour.</p>
-          <p class="cs-body-text">I came in as lead product designer, partnering closely with a PM who owned the product brief, and working within the technical boundaries set by how the third-party integration with Upwork actually functioned. I worked closely with the engineering team to understand the boundaries of what the integration could support — their constraints became design inputs, not blockers.</p>
+          <p class="cs-body-text">The business opportunity was equally clear. If Raenest could offer near-instant payouts while competitors couldn't, it would become the default account for any serious Upwork freelancer. FastTrack was that bet — a new standalone feature powered by a new API integration that would make funds available in under an hour.</p>
+          <p class="cs-body-text">I came in as lead product designer, partnering closely with a PM who owned the product brief, and working within the technical boundaries set by how the integration with Upwork actually functioned. I worked closely with the engineering team to understand the boundaries of what the integration could support — their constraints became design inputs, not blockers.</p>
         </div>
 
         <!-- Screen slot -->
@@ -260,7 +260,7 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
         <!-- Tension -->
         <div class="cs-section fade-in">
           <span class="cs-section__pill pill--tension">Tension</span>
-          <p class="cs-body-text">The core design challenge wasn't the speed — engineering handled that. It was this: to use FastTrack, users had to authenticate with Upwork inside a Raenest feature. That handoff, however briefly, breaks the illusion of a single-trusted product. And when you're asking someone to connect their income source to a third-party service, that moment of uncertainty is where people abandon.</p>
+          <p class="cs-body-text">The core design challenge wasn't the speed — engineering handled that. It was this: to use FastTrack, users had to authenticate with Upwork inside a Raenest feature. That handoff, however briefly, breaks the illusion of a single-trusted product. And when you're asking someone to connect their income source to an external service, that moment of uncertainty is where people abandon.</p>
           <p class="cs-body-text">At the same time, the integration had a fixed technical structure. The flow couldn't be redesigned around user preferences — it had to work within what the integration allowed. So the tension wasn't "what's the ideal flow?" It was: how do you make a technically constrained integration feel safe, simple, and native to Raenest?</p>
 
           <div class="cs-tensions">
@@ -274,7 +274,7 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
             </div>
             <div class="cs-tension-card">
               <span class="cs-tension-label">T3</span>
-              <span class="cs-tension-text">No prior mental model — users had never connected a third-party platform to Raenest before. The design had to explain a new behaviour without losing momentum.</span>
+              <span class="cs-tension-text">No prior mental model — users had never connected an external platform to Raenest before. The design had to explain a new behaviour without losing momentum.</span>
             </div>
           </div>
 
@@ -359,7 +359,7 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
         <!-- Reflection -->
         <div class="cs-section fade-in">
           <span class="cs-section__pill pill--reflection">Reflection</span>
-          <p class="cs-body-text">This project sharpened something I now apply to every financial product I design: trust is not a feature you add — it's a property of every decision in the flow. The moment I stopped thinking about the third-party integration as a technical constraint and started thinking of it as a trust design problem, the whole project became clearer.</p>
+          <p class="cs-body-text">This project sharpened something I now apply to every financial product I design: trust is not a feature you add — it's a property of every decision in the flow. The moment I stopped thinking about the integration as a technical constraint and started thinking of it as a trust design problem, the whole project became clearer.</p>
           <p class="cs-body-text">If I were to revisit this, I'd invest more time in post-launch qualitative research — specifically, interviewing users who completed FastTrack for the first time. The metrics show it worked, but I'd want to understand which specific moment made them feel safe enough to proceed. That insight would make the next version significantly stronger.</p>
         </div>
 
