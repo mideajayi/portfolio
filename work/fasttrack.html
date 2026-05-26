@@ -146,6 +146,7 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
 /* Screen placeholder */
 .cs-screen { width: 100%; aspect-ratio: 16/9; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin: var(--space-12) 0; overflow: hidden; position: relative; }
 .cs-screen--tall { aspect-ratio: 4/3; }
+.cs-screen--auto{aspect-ratio:unset;display:block;height:auto;}.cs-screen--auto img{width:100%;height:auto;display:block;object-fit:unset;}
 .cs-screen__label { font-size: var(--text-xs); color: var(--color-text-muted); letter-spacing: var(--tracking-widest); text-transform: uppercase; }
 .cs-screen img { width: 100%; height: 100%; object-fit: cover; }
 .cs-caption { font-size: var(--text-xs); color: var(--color-text-tertiary); line-height: var(--leading-normal); text-align: center; letter-spacing: var(--tracking-wide); font-style: italic; margin-top: calc(var(--space-3) - var(--space-12)); margin-bottom: var(--space-12); }
@@ -252,8 +253,8 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
         </div>
 
         <!-- Screen slot -->
-        <div class="cs-screen fade-in">
-          <span class="cs-screen__label">Current state / Before screens</span>
+        <div class="cs-screen cs-screen--auto fade-in">
+          <img src="../assets/images/fasttrack-before-after.png" alt="FastTrack — before and after payment flow">
         </div>
         <p class="cs-caption">The existing withdrawal experience — functional but slow, with funds taking up to 48 hours to process after a request was made.</p>
 
@@ -285,10 +286,10 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
         </div>
 
         <!-- Screen slot -->
-        <div class="cs-screen fade-in">
-          <span class="cs-screen__label">Exploration / Wireframes</span>
+        <div class="cs-screen cs-screen--auto fade-in">
+          <img src="../assets/images/fasttrack-wireframes.png" alt="FastTrack — Upwork authentication screen with design annotations">
         </div>
-        <p class="cs-caption">Early explorations mapping the authentication sequence — understanding the fixed technical structure before designing around it.</p>
+        <p class="cs-caption">The Upwork authentication screen, showing four design decisions that kept the trust intact at the highest anxiety point in the flow.</p>
 
         <!-- Decision -->
         <div class="cs-section fade-in">
@@ -332,10 +333,10 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
         </div>
 
         <!-- Screen slot -->
-        <div class="cs-screen cs-screen--tall fade-in">
+        <!-- <div class="cs-screen cs-screen--tall fade-in">
           <span class="cs-screen__label">Final screens — key flow</span>
         </div>
-        <p class="cs-caption">The FastTrack flow from Upwork connection to funds confirmed — dual-logo trust signals, plain-language explainers, and Raenest's native design language throughout.</p>
+        <p class="cs-caption">The FastTrack flow from Upwork connection to funds confirmed — dual-logo trust signals, plain-language explainers, and Raenest's native design language throughout.</p> -->
 
         <!-- Outcome -->
         <div class="cs-section fade-in">
@@ -347,10 +348,10 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
         </div>
 
         <!-- Screen slot -->
-        <div class="cs-screen fade-in">
-          <span class="cs-screen__label">Edge cases / Error states</span>
+        <div class="cs-screen cs-screen--auto fade-in">
+          <img src="../assets/images/fasttrack-error-states.png" alt="FastTrack — connection failure states and disconnect flow">
         </div>
-        <p class="cs-caption">Every failure state designed before the happy path was finalised — failed connections, pending states, timeout errors, and partial payout scenarios.</p>
+        <p class="cs-caption">How the feature handles failure at every stage.</p>
 
         <!-- Reflection -->
         <div class="cs-section fade-in">
