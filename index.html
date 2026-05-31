@@ -103,8 +103,8 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
 .hero__meta-sep { color: var(--color-text-muted); font-size: var(--text-xs); }
 .hero__meta .label { color: var(--color-text-secondary); }
 .hero__line { width: 100%; height: 1px; background: var(--color-border); margin: var(--space-12) 0 var(--space-10); }
-.hero__stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
-.hero__stat { display: flex; flex-direction: column; gap: var(--space-3); }
+.hero__stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); justify-items: center; }
+.hero__stat { display: flex; flex-direction: column; gap: var(--space-3); align-items: center; text-align: center; }
 .hero__stat-value { font-family: var(--font-display); font-size: clamp(var(--text-4xl), 5vw, var(--text-5xl)); font-weight: 400; color: var(--color-text-primary); letter-spacing: var(--tracking-tight); line-height: 1; }
 .hero__stat-label { font-size: var(--text-sm); color: var(--color-text-secondary); line-height: var(--leading-normal); }
 
@@ -253,7 +253,7 @@ body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; heigh
     <section class="intro">
       <div class="container">
         <div class="intro__inner fade-in">
-          <p class="intro__text"><strong>6+ years</strong> designing financial products across fintech and crypto — from <strong>Africa's first Bitcoin-backed loan</strong> to a remittance platform used by <strong>5M+ people</strong> in <strong>45+ countries</strong>. Currently at <strong>Raenest</strong>, building global banking infrastructure for African freelancers. Looking for my next <strong>senior challenge — open to relocation globally</strong>.</p>
+          <p class="intro__text"><strong>6+ years</strong> designing financial products across fintech and crypto: from <strong>Africa's first Bitcoin-backed loan</strong> to a remittance platform used by <strong>5M+ people</strong> in <strong>45+ countries</strong>. Currently at <strong>Raenest</strong>, building global banking infrastructure for African freelancers. Looking for my next <strong>senior challenge</strong>, open to relocation.</p>
           <a href="#work" class="intro__cta">
             <span>View selected work</span>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
